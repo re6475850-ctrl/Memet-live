@@ -1,0 +1,30 @@
+package com.example.streamflow; // अपनी पैकेज आईडी यहाँ लिखें
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        // 'START LIVE' बटन को ढूँढना
+        Button btnLive = findViewById(R.id.btn_live);
+
+        // क्लिक लिसनर (Click Listener) जोड़ना
+        btnLive.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // यहाँ आप दूसरी स्क्रीन (Live Streaming Activity) पर जाने का कोड लिखेंगे
+                // उदाहरण:
+                // Intent intent = new Intent(MainActivity.this, LiveStreamingActivity.class);
+                // startActivity(intent);
+            }
+        });
+    }
+}
