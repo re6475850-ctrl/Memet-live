@@ -3,15 +3,26 @@
     "name": "Memet Live",
     "slug": "memet-live",
     "version": "1.0.0",
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "owner": "re6475850-ctrl",
+    "scheme": "memetlive",
+    "cli": {
+      "appVersionSource": "remote"
+    },
     "android": {
       "package": "com.memetlive.app",
+      "versionCode": 1,
       "permissions": [
         "android.permission.CAMERA",
         "android.permission.RECORD_AUDIO"
-      ]
-    }
+      ],
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      }
+    },
+    "plugins": [
+      "expo-camera",
+      "expo-av"
+    ]
   }
 }
