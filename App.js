@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+
+    import React, { useState } from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
 import { CameraView, useCameraPermissions } from 'expo-camera';
 
@@ -6,16 +7,18 @@ export default function App() {
   const [permission, requestPermission] = useCameraPermissions();
 
   if (!permission) {
-    // परमिशन अभी चेक हो रही है
+    // Camera permissions are still loading
     return <View />;
   }
 
   if (!permission.granted) {
-    // परमिशन नहीं मिली है
+    // Camera permissions are not granted yet
     return (
       <View style={styles.container}>
-        <Text style={{ textAlign: 'center' }}>कैमरा और माइक्रोफोन के लिए परमिशन चाहिए</Text>
-        <Button onPress={requestPermission} title="परमिशन दें" />
+        <Text style={{ textAlign: 'center', color: 'white' }}>
+          We need your permission to show the camera
+        </Text>
+        <Button onPress={requestPermission} title="Grant Permission" />
       </View>
     );
   }
@@ -24,7 +27,7 @@ export default function App() {
     <View style={styles.container}>
       <CameraView style={styles.camera} facing="back" mode="video">
         <View style={styles.buttonContainer}>
-          <Text style={styles.text}>स्ट्रीमिंग लाइव है...</Text>
+          <Text style={styles.text}>Streaming Live...</Text>
         </View>
       </CameraView>
     </View>
@@ -32,9 +35,25 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, justifyContent: 'center' },
-  camera: { flex: 1 },
-  buttonContainer: { flex: 1, backgroundColor: 'transparent', flexDirection: 'row', margin: 20 },
-  text: { fontSize: 18, color: 'white', fontWeight: 'bold' }
+  container: { 
+    flex: 1, 
+    justifyContent: 'center',
+    backgroundColor: '#000' 
+  },
+  camera: { 
+    flex: 1 
+  },
+  buttonContainer: { 
+    flex: 1, 
+    backgroundColor: 'transparent', 
+    margin: 20,
+    justifyContent: 'flex-end'
+  },
+  text: { 
+    fontSize: 20, 
+    color: 'white', 
+    fontWeight: 'bold',
+    textAlign: 'center'
+  }
 });
-    
+
