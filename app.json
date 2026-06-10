@@ -1,0 +1,21 @@
+{
+  "expo": {
+    "name": "StreamFlow",
+    "slug": "streamflow",
+    "version": "1.0.0",
+    "sdkVersion": "51.0.0",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "android": {
+      "package": "com.example.streamflow",
+      "permissions": [
+        "CAMERA",
+        "RECORD_AUDIO",
+        "INTERNET"
+      ]
+    }
+  }
+}
+
