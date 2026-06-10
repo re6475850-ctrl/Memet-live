@@ -1,4 +1,5 @@
 
+    
     import React, { useState } from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
 import { CameraView, useCameraPermissions } from 'expo-camera';
@@ -56,4 +57,3 @@ const styles = StyleSheet.create({
     textAlign: 'center'
   }
 });
-
