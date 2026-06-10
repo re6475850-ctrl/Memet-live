@@ -1,21 +1,17 @@
 {
   "expo": {
-    "name": "StreamFlow",
-    "slug": "streamflow",
+    "name": "Memet Live",
+    "slug": "memet-live",
     "version": "1.0.0",
-    "sdkVersion": "51.0.0",
-    "platforms": [
-      "ios",
-      "android"
+    "assetBundlePatterns": [
+      "**/*"
     ],
     "android": {
-      "package": "com.example.streamflow",
+      "package": "com.memetlive.app",
       "permissions": [
-        "CAMERA",
-        "RECORD_AUDIO",
-        "INTERNET"
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO"
       ]
     }
   }
 }
-
